@@ -45,10 +45,10 @@ before_script:
     - emulator -avd test -no-window &
     - android-wait-for-emulator
 
-script:
-    ./gradlew dependencyCheckAnalyze build
-    ./gradlew assembleDebugAndroidTest -PdisablePreDex --continue -stacktrace
-    ./gradlew connectedDebugAndroidTest -PdisablePreDex --continue --stacktrace
+#script:
+    #./gradlew dependencyCheckAnalyze build
+    #./gradlew assembleDebugAndroidTest -PdisablePreDex --continue -stacktrace
+    #./gradlew connectedDebugAndroidTest -PdisablePreDex --continue --stacktrace
 
 after_failure:
     - cat $TRAVIS_BUILD_DIR/app/gen_build/reports/lint.xml
