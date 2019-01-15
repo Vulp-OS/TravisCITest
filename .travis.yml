@@ -39,6 +39,8 @@ before_script:
   --abi $ANDROID_ABI --tag $ANDROID_TAG
 - emulator -avd test -no-window &
 - android-wait-for-emulator
+- pwd
+- ls
 after_failure:
 - cat $TRAVIS_BUILD_DIR/app/build/reports/lint-results.xml
 deploy:
