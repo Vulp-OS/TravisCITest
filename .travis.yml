@@ -31,9 +31,10 @@ licenses:
     - google-gdk-license-.+
 
 cache:
-    "$HOME/.gradle/caches/"
-    "$HOME/.gradle/wrapper/"
-    "$HOME/.android/build-cache/"
+    directories:
+        - "$HOME/.gradle/caches/"
+        - "$HOME/.gradle/wrapper/"
+        - "$HOME/.android/build-cache/"
 
 #before_install:
 
@@ -48,4 +49,5 @@ script:
     ./gradlew assembleDebugAndroidTest -PdisablePreDex --continue -stacktrace
     ./gradlew connectedDebugAndroidTest -PdisablePreDex --continue --stacktrace
 
-after_failure: cat $TRAVIS_BUILD_DIR/app/gen_build/reports/lint.xml
+after_failure:
+    - cat $TRAVIS_BUILD_DIR/app/gen_build/reports/lint.xml
