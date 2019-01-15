@@ -40,7 +40,7 @@ before_script:
 - emulator -avd test -no-window &
 - android-wait-for-emulator
 after_failure:
-- cat $TRAVIS_BUILD_DIR/app/gen_build/reports/lint.xml
+- cat $TRAVIS_BUILD_DIR/app/build/reports/lint-results.xml
 deploy:
   provider: releases
   api_key:
