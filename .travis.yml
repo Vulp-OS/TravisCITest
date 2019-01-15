@@ -40,8 +40,7 @@ before_script:
 - emulator -avd test -no-window &
 - android-wait-for-emulator
 - pwd
-- ls -l
-- chmod +x gradlew
+- ls
 after_failure:
 - cat $TRAVIS_BUILD_DIR/app/build/reports/lint-results.xml
 deploy:
