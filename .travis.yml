@@ -53,7 +53,7 @@ before_script:
     #./gradlew connectedDebugAndroidTest -PdisablePreDex --continue --stacktrace
 
 after_failure:
-    - cat $TRAVIS_BUILD_DIR/app/gen_build/reports/lint.xml
+    - cat $TRAVIS_BUILD_DIR/app/build/reports/lint-results.xml
 
 deploy:
     provider: releases
