@@ -47,10 +47,8 @@ before_script:
     - pwd
     - ls -l
 
-#script:
-    #./gradlew dependencyCheckAnalyze build
-    #./gradlew assembleDebugAndroidTest -PdisablePreDex --continue -stacktrace
-    #./gradlew connectedDebugAndroidTest -PdisablePreDex --continue --stacktrace
+script:
+    ./gradlew build connectedCheck
 
 after_failure:
     - cat $TRAVIS_BUILD_DIR/app/build/reports/lint-results.xml
