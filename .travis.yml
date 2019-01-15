@@ -56,9 +56,9 @@ after_failure:
     - cat $TRAVIS_BUILD_DIR/app/build/reports/lint-results.xml
 
 deploy:
-    provider: releases
-        api_key:
-            secure: S4VTbIiJbmth/vrhN2JgoKhv69gQ6Gbub8oYrx/nAbC5/iLwOzH2aS97mnDVzrb3eMEYFRqHUdQxzEBZd1/HdtXaED2lpdrqSWsLzaj9q2PkjjLR6tsm7vxoLCvm8GrX9X9Tdthm7x3PFPoztqLt7VrVS7qxhPnhNuyj4wXogIP7hVkWVvaC5UGOAv8kVUBJNkBufeVxH5BsxxyFNT2meocgnm+h5eUWvDk0cvEgtZgGbvhzo6S1c2GzGZVclRRuKyMH+kUqYU4YD9D3VumT8oxDjw577qm05nbzJwFX0IjQGPJuv9mbr8b0fgolfZMHdtAj2kqTd+fSQHMF4ucXDF0Q+4TlzZ5V2rLBmA5ydwe2PF/xhk/4h4S81siieY92xyPz1jOGvlIcrbgeL5bO9iXgCDh9ecPxPrE/dQ24bSnXQrt8zf3EoLgC9WrOPc4FUMPqDptPMcq2bFXCGFzAHqJ+oQE+m9HjglssKG2vagCLRiTdDI7ZNqDJOydOzrG6OrICqochLiSbg/NldHnU5DNnpFb50y5A1QHdeVzhOpUH1DfT4H3txwfmzrLpCJItTNer7ukHUo/od+YCt+A6geQKAzQvuuC2B+q9eQIeE0tizB761D2pj3UJD7dXu/Q/9PYOCopTkJ/hbANQeoH3xHUuCu9O2B8pTXpBIdO9JsU=
-    file: $TRAVIS_BUILD_DIR/app/build/outputs/apk/debug/app-debug.apk
-    on:
-        repo: drockwood94/TravisCITest
+  provider: releases
+  api_key:
+    secure: S4VTbIiJbmth/vrhN2JgoKhv69gQ6Gbub8oYrx/nAbC5/iLwOzH2aS97mnDVzrb3eMEYFRqHUdQxzEBZd1/HdtXaED2lpdrqSWsLzaj9q2PkjjLR6tsm7vxoLCvm8GrX9X9Tdthm7x3PFPoztqLt7VrVS7qxhPnhNuyj4wXogIP7hVkWVvaC5UGOAv8kVUBJNkBufeVxH5BsxxyFNT2meocgnm+h5eUWvDk0cvEgtZgGbvhzo6S1c2GzGZVclRRuKyMH+kUqYU4YD9D3VumT8oxDjw577qm05nbzJwFX0IjQGPJuv9mbr8b0fgolfZMHdtAj2kqTd+fSQHMF4ucXDF0Q+4TlzZ5V2rLBmA5ydwe2PF/xhk/4h4S81siieY92xyPz1jOGvlIcrbgeL5bO9iXgCDh9ecPxPrE/dQ24bSnXQrt8zf3EoLgC9WrOPc4FUMPqDptPMcq2bFXCGFzAHqJ+oQE+m9HjglssKG2vagCLRiTdDI7ZNqDJOydOzrG6OrICqochLiSbg/NldHnU5DNnpFb50y5A1QHdeVzhOpUH1DfT4H3txwfmzrLpCJItTNer7ukHUo/od+YCt+A6geQKAzQvuuC2B+q9eQIeE0tizB761D2pj3UJD7dXu/Q/9PYOCopTkJ/hbANQeoH3xHUuCu9O2B8pTXpBIdO9JsU=
+  file: $TRAVIS_BUILD_DIR/app/build/outputs/apk/debug/app-debug.apk
+  on:
+    repo: drockwood94/TravisCITest
