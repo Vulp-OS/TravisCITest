@@ -41,7 +41,7 @@ before_script:
 - android-wait-for-emulator
 - pwd
 - ls -l
-script: "./gradlew build connectedCheck"
+script: travis_wait 30 "./gradlew build connectedCheck"
 after_failure:
 - cat $TRAVIS_BUILD_DIR/app/build/reports/lint-results.xml
 deploy:
